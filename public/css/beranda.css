@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar p {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #34495e;
+}
+
+.form-logout .logout-btn {
+    margin-top: 200px;
+    margin-left: 55px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-self: center;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+}
+
+#peminjamanForm {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#peminjamanForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#peminjamanForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #2ecc71;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.content h1 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+}
+
+.form-container {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.form-container h2 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-pinjam {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-pinjam:hover {
+    background-color: #27ae60;
+}
+
+/* Tambahkan style khusus untuk dropdown */
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    appearance: none; /* Menghilangkan default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+select:hover {
+    border-color: #95a5a6;
+}
+
+/* Style untuk option di dalam select */
+select option {
+    padding: 8px;
+    background-color: white;
+    color: #2c3e50;
+}
+
+select option:hover {
+    background-color: #f5f6fa;
+}
+
+/* Style untuk disabled option */
+select option[value=""] {
+    color: #95a5a6;
+}
+
+/* Style khusus untuk select yang disabled */
+select:disabled {
+    background-color: #f5f6fa;
+    cursor: not-allowed;
+}
+
+/* Style untuk select saat ada error */
+select.error {
+    border-color: #e74c3c;
+}
+
+/* Animation saat dropdown dibuka */
+select:focus {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    color: #3498db;
+    font-size: 24px;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+.stat-info small {
+    color: #28a745;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.stat-info small.down {
+    color: #dc3545;
+}
+
