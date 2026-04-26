@@ -1,148 +1,84 @@
 # Sistem Manajemen Perpustakaan
 
-Aplikasi manajemen perpustakaan berbasis web untuk mengelola peminjaman buku, denda, dan transaksi perpustakaan secara efisien.
+Aplikasi web berbasis Laravel untuk mengelola peminjaman buku, denda, dan transaksi perpustakaan secara efisien dan otomatis.
 
-## 📚 Fitur Utama
+## � Tentang Project
 
-### 1. Manajemen Peminjaman
-- Pencatatan peminjaman buku dengan data lengkap peminjam
-- Sistem perpanjangan peminjaman (maksimal 7 hari)
-- Pengembalian buku dengan validasi otomatis
-- Tracking status peminjaman real-time
+Sistem ini dirancang untuk perpustakaan sekolah atau umum yang ingin mendigitalisasi operasional harian mereka. Aplikasi ini menyelesaikan masalah pencatatan manual dengan menyediakan tracking peminjaman real-time, perhitungan denda otomatis untuk keterlambatan, dan pelaporan transaksi yang komprehensif.
 
-### 2. Sistem Denda
-- Perhitungan denda otomatis untuk keterlambatan
-- Manajemen pembayaran denda
-- Pengelompokan denda per peminjam
-- Riwayat dan status pembayaran denda
+**Target Pengguna:** Administrator perpustakaan, pustakawan, dan staff perpustakaan
 
-### 3. Pencarian & Filter
-- Pencarian peminjaman berdasarkan nama/judul
-- Filter transaksi berdasarkan periode
-- Pencarian denda dan status pembayaran
+**Masalah yang Diselesaikan:** Menghilangkan pencatatan manual, mengurangi kesalahan perhitungan denda, dan memberikan akses instan ke riwayat peminjaman dan data anggota.
 
-## 💻 Teknologi
+## ✨ Fitur Utama
 
-- PHP 7.4+
-- Laravel 8+
-- MySQL 5.7+
-- Bootstrap 4
-- JavaScript/jQuery
-- SweetAlert2
+- **Manajemen Peminjaman** - Tracking peminjaman buku dengan perhitungan tanggal jatuh tempo otomatis dan fitur perpanjangan
+- **Sistem Denda** - Perhitungan denda keterlambatan otomatis dengan tracking pembayaran
+- **Manajemen Anggota** - Database lengkap peminjam dengan riwayat transaksi
+- **Inventori Buku** - Manajemen katalog dengan status ketersediaan
+- **Laporan** - Generate laporan PDF untuk transaksi dan statistik
+- **Pencarian & Filter** - Pencarian cepat berdasarkan nama anggota, judul buku, atau rentang tanggal
 
-## 📋 Prasyarat
+## �️ Tech Stack
 
-Sebelum instalasi, pastikan sistem Anda memenuhi persyaratan berikut:
+**Backend:** PHP 8.x, Laravel 11.x  
+**Database:** MySQL / SQLite  
+**Frontend:** Blade Templates, Bootstrap 5, JavaScript  
+**Libraries:** DomPDF (laporan), SweetAlert2 (notifikasi)
 
-- PHP >= 7.4
-- Composer
-- Node.js & NPM
-- MySQL
-- Web Server (Apache/Nginx)
+## � Cara Menjalankan Project
 
-## 🚀 Instalasi
+```bash
+# Clone repository
+git clone https://github.com/MGT06/KPSMT3.git
+cd KPSMT3
 
-1. Clone repository
-2. Install dependencies
-3. Konfigurasi database
-4. Migrasi database
-5. Jalankan server
+# Install dependencies
+composer install
+npm install && npm run build
 
-## 📖 Penggunaan
+# Setup environment
+cp .env.example .env
+php artisan key:generate
 
-### Login Admin
+# Setup database
+php artisan migrate --seed
 
-URL: http://localhost:8000/login
+# Jalankan aplikasi
+php artisan serve
+```
 
-Username: admin
-Password: admin123
+Akses aplikasi di `http://localhost:8000`
 
-### Manajemen Peminjaman
-1. Klik tombol "Tambah Peminjaman"
-2. Pilih peminjam dari daftar
-3. Pilih buku yang akan dipinjam
-4. Tentukan durasi peminjaman (max 7 hari)
-5. Simpan transaksi
+**Login Default:**  
+Username: `admin`  
+Password: `admin123`
 
-### Pengelolaan Denda
-1. Akses menu Denda
-2. Pilih peminjam yang memiliki denda
-3. Input jumlah dan jenis denda
-4. Update status pembayaran
+## 📸 Screenshot
 
-## 📜 Aturan Bisnis
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-### Peminjaman
-- Maksimal durasi peminjaman: 7 hari
-- Maksimal perpanjangan: 7 hari
-- Satu siswa bisa meminjam beberapa buku
+### Halaman Peminjaman
+![Peminjaman](screenshots/peminjaman.png)
 
-### Denda
-- Status: Belum bayar/Sudah bayar
-- Jenis: Keterlambatan/Kerusakan/Kehilangan
-- Pembayaran wajib dilunasi untuk peminjaman baru
+### Manajemen Buku
+![Buku](screenshots/buku.png)
 
-## 🔧 Maintenance
+### Sistem Denda
+![Denda](screenshots/denda.png)
 
-### Backup Database
-- Jalankan perintah `php artisan backup:run`
-- File backup akan disimpan di folder `storage/app/public/backup`
+### Laporan Transaksi
+![Laporan](screenshots/laporan.png)
 
-### Update Sistem
-- git pull
-- composer update
-- npm install
-- npm run build
-- php artisan migrate --force
-- php artisan optimize
-- php artisan config:cache
-- php artisan route:cache
+> **Note:** Tambahkan screenshot aplikasi Anda ke folder `screenshots/` di root project
 
-## 🔒 Keamanan
+## � Kontak
 
-- Validasi input untuk semua form
-- Proteksi CSRF untuk semua request
-- Autentikasi untuk akses admin
-- Logging untuk aktivitas penting
+**Developer:** Given  
+**Email:** grdgiven4@gmail.com  
+**GitHub:** [@MGT06](https://github.com/MGT06)
 
-## 🐛 Troubleshooting
+---
 
-### Masalah Umum
-1. Database connection error
-   - Cek konfigurasi .env
-   - Pastikan service MySQL berjalan
-   - Verifikasi credentials database
-
-2. Composer error
-   - Hapus folder vendor
-   - Jalankan `composer install` ulang
-   - Clear cache: `php artisan cache:clear`
-
-## 📈 Changelog
-
-### v1.0.0 (29 Okt 2024)
-- Sistem peminjaman dasar
-- Manajemen denda
-- Pencarian dan filter
-
-## 👥 Kontribusi
-
-1. Fork repository
-2. Buat branch fitur (`git checkout -b fitur/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Menambahkan fitur'`)
-4. Push ke branch (`git push origin fitur/AmazingFeature`)
-5. Buat Pull Request
-
-## 📞 Support
-
-- Email: grdgiven4@gmail.com
-- WhatsApp: +62 813-1127-7725
-
-## 📄 Lisensi
-
-Dilindungi oleh lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
-
-## 🙏 Credit
-
-Dikembangkan oleh [Given](https://github.com/MGT06)
-Copyright © 2024
+© 2024 - Built with Laravel
