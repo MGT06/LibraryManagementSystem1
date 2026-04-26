@@ -2,31 +2,31 @@
 
 Aplikasi web berbasis Laravel untuk mengelola peminjaman buku, denda, dan transaksi perpustakaan secara efisien dan otomatis.
 
-## � Tentang Project
+## Tentang Project
 
-Sistem ini dirancang untuk perpustakaan sekolah atau umum yang ingin mendigitalisasi operasional harian mereka. Aplikasi ini menyelesaikan masalah pencatatan manual dengan menyediakan tracking peminjaman real-time, perhitungan denda otomatis untuk keterlambatan, dan pelaporan transaksi yang komprehensif.
+Sistem ini dirancang untuk perpustakaan sekolah atau umum yang ingin mendigitalisasi operasional harian mereka. Aplikasi ini menyelesaikan masalah pencatatan manual dengan menyediakan tracking peminjaman real-time, dan pelaporan transaksi yang komprehensif.
 
 **Target Pengguna:** Administrator perpustakaan, pustakawan, dan staff perpustakaan
 
-**Masalah yang Diselesaikan:** Menghilangkan pencatatan manual, mengurangi kesalahan perhitungan denda, dan memberikan akses instan ke riwayat peminjaman dan data anggota.
+**Masalah yang Diselesaikan:** Menghilangkan pencatatan manual, dan memberikan akses instan ke riwayat peminjaman dan data anggota.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Manajemen Peminjaman** - Tracking peminjaman buku dengan perhitungan tanggal jatuh tempo otomatis dan fitur perpanjangan
-- **Sistem Denda** - Perhitungan denda keterlambatan otomatis dengan tracking pembayaran
+- **Sistem Denda** - Perhitungan denda dengan tracking pembayaran
 - **Manajemen Anggota** - Database lengkap peminjam dengan riwayat transaksi
 - **Inventori Buku** - Manajemen katalog dengan status ketersediaan
 - **Laporan** - Generate laporan PDF untuk transaksi dan statistik
 - **Pencarian & Filter** - Pencarian cepat berdasarkan nama anggota, judul buku, atau rentang tanggal
 
-## �️ Tech Stack
+## Tech Stack
 
-**Backend:** PHP 8.x, Laravel 11.x  
-**Database:** MySQL / SQLite  
+**Backend:** PHP 8.3.12 , Laravel 11.51 
+**Database:** MySQL 
 **Frontend:** Blade Templates, Bootstrap 5, JavaScript  
 **Libraries:** DomPDF (laporan), SweetAlert2 (notifikasi)
 
-## � Cara Menjalankan Project
+## Cara Menjalankan Project
 
 ```bash
 # Clone repository
@@ -54,26 +54,25 @@ Akses aplikasi di `http://localhost:8000`
 Username: `admin`  
 Password: `admin123`
 
-## 📸 Screenshot
+## Screenshot
+
+### Login
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/12a299de-09b1-462c-a286-c38511dfb646" />
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/bc5fbed1-e61d-48bc-af1c-36766104bca6" />
 
-### Halaman Peminjaman
-![Peminjaman](screenshots/peminjaman.png)
+### Transaksi
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/54a49a23-0618-424a-8d82-095e034d5602" />
+
+### Manajemen Peminjam
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/77a7788e-f2e6-4117-bec2-cea9212b0d14" />
 
 ### Manajemen Buku
-![Buku](screenshots/buku.png)
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/30117b7b-8b9b-4ed5-b557-917488e1897e" />
 
-### Sistem Denda
-![Denda](screenshots/denda.png)
 
-### Laporan Transaksi
-![Laporan](screenshots/laporan.png)
-
-> **Note:** Tambahkan screenshot aplikasi Anda ke folder `screenshots/` di root project
-
-## � Kontak
+## Kontak
 
 **Developer:** Given  
 **Email:** grdgiven4@gmail.com  
