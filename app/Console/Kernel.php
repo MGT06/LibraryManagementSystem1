@@ -9,6 +9,7 @@ class Kernel extends ConsoleKernel
 {
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('pinjaman:update-status')->daily();
+        // Cek keterlambatan dan buat denda otomatis setiap hari jam 00:01
+        $schedule->command('check:keterlambatan')->dailyAt('00:01');
     }
 } 
